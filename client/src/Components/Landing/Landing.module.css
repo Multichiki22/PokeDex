@@ -1,0 +1,20 @@
+
+.iniciar {
+  height: 25%;
+}
+.test{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.boton {
+  background-image: url("../../Assets/Pokeball.png");
+  background-size: 100%;
+  border: 0;
+  width: 11vw;
+  height: 11vw;
+  border-radius: 50%;
+  margin-top: 23%;
+}

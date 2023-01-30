@@ -1,4 +1,4 @@
-const { Pokemon, conn } = require('../../src/db.js');
+const { Pokemon, conn } = require('../../src/DB/db.js');
 const { expect } = require('chai');
 
 describe('Pokemon model', () => {

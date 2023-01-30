@@ -1,0 +1,31 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  margin-top: 1%;
+  max-width: 100%;
+  padding-left: 0%;
+  padding-right: 0%;
+ 
+}
+@media (max-width: 600px) {
+  .container {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  }
+}
+
+.selectMostrar,
+.selectOrdenarPor,
+.selectOrden {
+  color: #000;
+  background-color: white;
+  font-weight: 600;
+  padding: 0.1% 0.1% 0.1% 0.1%;
+  font-size: 100%;
+  border: solid 2px rgb(192, 198, 255);
+  border-radius: 0.5vw;
+  text-align: center;
+}

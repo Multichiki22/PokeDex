@@ -41,6 +41,7 @@ build/Release
 node_modules/
 jspm_packages/
 
+
 # TypeScript v1 declaration files
 typings/
 
@@ -105,3 +106,7 @@ dist
 
 # package-lock.json
 package-lock.json
+thunder-tests/thunderActivity.json
+thunder-tests/thunderclient.json
+thunder-tests/thunderCollection.json
+thunder-tests/thunderEnvironment.json

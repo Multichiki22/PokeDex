@@ -1,0 +1,80 @@
+.divLogo {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  width: 20%
+}
+.logo {
+  width: 100%;
+}
+.searchBar {
+  grid-area: 1 / 3 / 2 / 4;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5%;
+  border-radius: 1.5vw;
+  background-color: white;
+  height: 40%;
+  justify-content: space-between;
+  align-items: center;
+  min-width: fit-content;
+  overflow: hidden;
+}
+.input {
+  border: 0;
+  font-size: 100%;
+  width: 50%;
+  display: flex;
+}
+.boton {
+  display: flex;
+  background-color: white;
+  border: 0;
+  width: fit-content;
+  font-size: 120%;
+}
+.container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  padding: 0.5% 2% 0.5% 2%;
+  border-radius: 0px 0 2vw 2vw;
+  background-color: rgb(192, 198, 255);
+  align-items: center;
+}
+.input:focus {
+  outline: none;
+}
+.divSpan {
+  text-decoration: none;
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  height: 60%;
+  justify-content: center;
+}
+.logo:hover {
+  transition-duration: 1s;
+  transform: scale(1.2, 1.2);
+}
+.botonCrear {
+  
+  min-height: fit-content;
+  height: 80%;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 10vw;
+  padding: 0 1.2vw 0  1vw;
+  transition: all ease-in-out 0.2s;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  position: relative;
+}
+.spanCrear {
+  color: black;
+  font-size: 160%;
+  font-weight: 600;
+}
+.botonCrear:hover {
+  background-color: #ededed;
+}

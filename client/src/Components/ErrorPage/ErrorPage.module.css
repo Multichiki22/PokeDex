@@ -1,0 +1,15 @@
+.codigo{
+    font-size: 400%;
+}.mensaje{
+    font-size: 200%;
+}.container{
+    background-color: white;
+    width: 100%;
+}.fondo{
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}.imagen{
+    width: 30%;
+}

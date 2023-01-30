@@ -1,0 +1,76 @@
+.container{
+  width: 100%;
+  height: fit-content;
+  background-color: white;
+  border-radius: 10px;
+}.foto{
+  padding: 5% 5% 0% 5%;
+  width: 50%;
+}.spanVida{
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  right: 5%;
+  align-items: center;
+  width: fit-content;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 50vw;
+}.id{
+  position: relative;
+  background-color: white;
+  width: fit-content;
+  left: 5%;
+  font-size: 100%;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 50vw;
+}.nombre {
+  font-size: 300%;
+  font-weight: bold;
+}.divTipos {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  justify-content: space-around;
+  display: flex;
+}.divTipo{
+  display: flex;
+}
+.divAtaque,.divDefensa,.divVelocidad{
+  display: flex;
+ flex-direction: column;
+ margin-bottom: 4%;
+}.stats{
+  display: flex;
+  justify-content: space-around;
+}.ataque,.defensa,.velocidad{
+  font-size: 220%;
+  font-weight: 500;
+  color: black;
+}.vida{
+  font-size: 120%;
+  font-weight: 600;
+}.foto:hover {
+  transition-duration: 1s;
+  transform: scale(1.2,1.2);
+}.divFoto{
+  display: flex;
+  width: 60%;
+}.foto{
+  width: 100%;
+}.test{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}.spanStat,.stats{
+  font-size: 100%;
+  color: rgb(170, 170, 170);
+  display: flex;
+}.titulo{
+  padding-top: 3%;
+  display: flex;
+  justify-content: space-between;
+}

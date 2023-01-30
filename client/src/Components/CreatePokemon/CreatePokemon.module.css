@@ -1,0 +1,143 @@
+
+@media (min-width: 300px) {
+  .form{
+    width: 90%;
+  }
+}
+@media (min-width: 700px) {
+  .form{
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .form{
+    width: 35%;
+  }
+}
+
+
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.form {
+  background: radial-gradient(
+    circle at 50% 00%,
+    rgb(192, 198, 255) 50%,
+    #ffffff 50%
+  );
+  border-radius: 10%;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  margin-top: 2%;
+  height: 100%;
+}
+
+.divCaracteristicas,
+.divStats,
+.divTipo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: fit-content;
+  margin: 2%;
+}
+.divNombre,
+.divAltura,
+.divPeso,
+.divAtaque,
+.divDefensa,
+.divVelocidad,
+.divVida {
+  display: flex;
+  height: fit-content;
+  max-width: fit-content;
+  flex-wrap: wrap;
+  padding-right: 2%;
+  padding-left: 2%;
+  margin: 1%;
+}
+.spanNombre,
+.spanAltura,
+.spanPeso,
+.errorNombre,
+.spanAtaque,
+.spanVida,
+.spanDefensa,
+.spanVelocidad,
+.output {
+    font-size: 120%;
+  display: flex;
+  padding-right: 8%;
+ 
+}
+.inputNombre,
+.inputAltura,
+.inputPeso {
+  width: 100%;
+font-size:120%;
+  height: 10%;
+  display: flex;
+  line-height: 28px;
+  border: 2px solid transparent;
+  border-bottom-color: #777;
+  padding: 0.2rem 0;
+  outline: none;
+  background-color: transparent;
+  color: #0d0c22;
+  transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.inputAltura:focus,
+.inputPeso:focus,
+.inputNombre:focus,
+.inputTipo:focus {
+    
+  background-color: white;
+  outline: none;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  border-color: #7a9cc6;
+}
+
+.erroresCaracteristicas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.inputTipo {
+  font-size:110%;
+  height: 15%;
+  width: 50%;
+  display: flex;
+  line-height: 28px;
+  border: 2px solid transparent;
+  border-bottom-color: #777;
+  padding: 0.2rem 0;
+  outline: none;
+  background-color: transparent;
+  color: #0d0c22;
+  transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.botonTipo {
+    font-weight: 800;
+  display: flex;
+  align-self: center;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 0;
+}
+.inputVelocidad,.inputDefensa,.inputVida,.inputAtaque{
+width: 100%;
+height: 100%;
+display: flex;
+align-self: center;
+}.botonTipo:hover {
+
+    border: solid 1px rgb(192, 198, 255);
+    box-shadow: 0px 0px 2px 2px rgb(192, 198, 255);
+}
