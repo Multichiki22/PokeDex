@@ -54,7 +54,7 @@ export default function PokemonCard(props) {
         </div>
       </div>
       <span className={styles.nombre}>
-        {Nombre ? Nombre : "No resgistrado"}{" "}
+        {Nombre ? Nombre[0].toUpperCase()+ Nombre.slice(1) : "No resgistrado"}
       </span>
       <div className={styles.divTipos}>
         {Tipo.map((tipo) => (

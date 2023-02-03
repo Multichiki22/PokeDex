@@ -1,10 +1,11 @@
-const regexTexto = /^[a-zA-Z ]*$/;
+const regexTexto = /^[a-z A-Z]*$/;
 const regexTipos = /^[a-zA-Z]*$/;
 
 export function validateAll(nuevoPokemon,Tipos) {
   const { Nombre, Ataque } = nuevoPokemon;
   let errores = {};
   if (Nombre.length === 0) errores["Nombre"] = "Nombre es un campo obligatorio";
+  if (Nombre !== Nombre.toLowerCase())  errores["Nombre"] = "El nombre debe estar en minusculas";
   if (!regexTexto.test(Nombre))
     errores["Nombre"] = "El nombre solo debe contener carateres alfabeticos";
   if (Nombre.length > 12)
@@ -27,6 +28,7 @@ export function validateInput(input, valor) {
         return "El nombre debe ser maximo de 12 caracteres";
       if (valor.length < 3) return "El nombre debe ser minimo de 3 caracteres";
       if (valor.length === 0) return "Nombre es un campo obligatorio";
+      if (valor !== valor.toLowerCase()) return "El nombre debe estar en minusculas";
       return true;
     case "Ataque":
       if (valor === "") return "Ataque es un campo obligatorio";

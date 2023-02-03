@@ -1,11 +1,12 @@
 import Loading from "../Loading/Loading";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import TipoTag from "../TipoTag/TipoTag";
 import fotoDefault from "../../Assets/Logo2.png";
 import styles from "./Detail.module.css";
 export default function Detail() {
+  const navigate= useNavigate()
   const { id } = useParams();
   const [detail, setDetail] = useState();
   useEffect(() => {
@@ -15,7 +16,9 @@ export default function Detail() {
         return setDetail(response.data);
       })
       .catch((error) => {
-        console.log(error);
+        const mensaje = error["response"]["data"]["error"];
+        const codigo = error["response"]["status"];
+       navigate(`/Error?mensaje=${mensaje}&codigo=${codigo}`);
       });
   }, [id]);
 
@@ -60,8 +63,8 @@ export default function Detail() {
           } 50%, #ffffff 50%)`,
         }}
       >
-          <span className={styles.nombre}>{Nombre}</span>
-      
+        <span className={styles.nombre}>{Nombre}</span>
+
         <div className={styles.divImagen}>
           <img
             className={styles.imagen}
@@ -72,19 +75,19 @@ export default function Detail() {
         <span className={styles.stats}>Estadisticas: </span>
         <div className={styles.divStats}>
           <div className={styles.divEstadisticas}>
-            <span className={styles.stat}> {Ataque}</span>
+            <span className={styles.stat}> {Ataque ? Ataque: "?" }</span>
             <span className={styles.spanStat}> Ataque:</span>
           </div>
           <div className={styles.divEstadisticas}>
-            <span className={styles.stat}>{Defensa}</span>
+            <span className={styles.stat}>{Defensa ? Defensa: "?" }</span>
             <span className={styles.spanStat}> Defensa:</span>
           </div>
           <div className={styles.divEstadisticas}>
-            <span className={styles.stat}>{Velocidad}</span>
+            <span className={styles.stat}>{Velocidad ? Velocidad: "?" }</span>
             <span className={styles.spanStat}> Velocidad:</span>
           </div>
           <div className={styles.divEstadisticas}>
-            <span className={styles.stat}>{Vida}</span>
+            <span className={styles.stat}>{Vida ? Vida : "?" }</span>
             <span className={styles.spanStat}> Vida:</span>
           </div>
         </div>
@@ -92,11 +95,11 @@ export default function Detail() {
         <div className={styles.divCaracteristicas}>
           <div className={styles.divCaracteristica}>
             <span className={styles.spanCaracteristica}>Peso:</span>
-            <span className={styles.caracteristica}>{Peso} Lb</span>
+            <span className={styles.caracteristica}>{Peso?Peso:"?"} Lb</span>
           </div>
           <div className={styles.divCaracteristica}>
             <span className={styles.spanCaracteristica}>Altura:</span>
-            <span className={styles.caracteristica}>{Altura} Pies</span>
+            <span className={styles.caracteristica}>{Altura?Altura:"?"} Pies</span>
           </div>
         </div>
         <div className={styles.divTipo}>

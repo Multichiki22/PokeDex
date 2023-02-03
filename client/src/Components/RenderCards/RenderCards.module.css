@@ -1,16 +1,3 @@
-/* @media (max-width: 500px) {
-    .pokemon {
-        width: 60vw;
-    }
-}
-@media (max-width: 1000px) {
-    .pokemon {
-        width: 40%;
-    }
-} */
-
-
-
 .allPokemons {
     margin-top: 1%;
     margin-bottom: 2%;
@@ -23,3 +10,15 @@
     width: fit-content;
     height: fit-content;
 }
+@media (min-width: 300px){
+    .pokemon{
+       padding-left: 10%;
+       padding-right: 10%;
+    }
+  }
+  @media (min-width: 700px){
+    .pokemon {
+        padding-left: 0%;
+       padding-right: 0%;
+    }
+  }

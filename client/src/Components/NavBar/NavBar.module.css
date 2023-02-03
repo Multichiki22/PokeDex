@@ -16,6 +16,7 @@
   height: 40%;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
   min-width: fit-content;
   overflow: hidden;
 }
@@ -56,8 +57,7 @@
   transition-duration: 1s;
   transform: scale(1.2, 1.2);
 }
-.botonCrear {
-  
+.botonCrear { 
   min-height: fit-content;
   height: 80%;
   border: 2px solid #ffffff;
@@ -67,8 +67,8 @@
   transition: all ease-in-out 0.2s;
   display: flex;
   align-self: center;
+  align-content: center;
   align-items: center;
-  position: relative;
 }
 .spanCrear {
   color: black;
@@ -77,4 +77,37 @@
 }
 .botonCrear:hover {
   background-color: #ededed;
+}
+
+@media (min-width: 300px) {
+  .spanCrear{
+    font-size: 80%;
+  }
+  .boton{
+    font-size: 60%;
+    align-content: center;
+    width: fit-content;
+  }
+  .input{
+    font-size: 80%;
+    display: flex;
+    align-content: center;
+  }
+}
+@media (min-width: 700px) {
+  .spanCrear{
+    font-size: 160%;
+    display: flex;
+    align-content: center;
+    
+  }
+  .input{
+    display: flex;
+    align-content: center;
+    font-size: 100%;
+  }
+  .boton{
+    font-size: 100%;
+    align-content: center;
+  }
 }

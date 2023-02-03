@@ -18,3 +18,9 @@
   border-radius: 50%;
   margin-top: 23%;
 }
+.boton:hover{
+  background-color: white;
+  box-shadow: 0 0 30px 10px  rgb(77, 163, 255);
+  transform: scale(1.2);
+  transition-duration: 1s;
+}

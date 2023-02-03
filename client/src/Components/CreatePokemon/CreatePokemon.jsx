@@ -87,7 +87,8 @@ export default function CreatePokemon() {
           window.location.reload();
         })
         .catch((error) => {
-          alert(error.message);
+          console.log(error)
+          alert(error.response.data.error);
         });
     }
   };
@@ -100,6 +101,7 @@ export default function CreatePokemon() {
             <span className={styles.spanNombre}>Nombre: </span>
             <input
               className={styles.inputNombre}
+              pattern="[a-z]+"
               type="text"
               name="Nombre"
               placeholder="Nombre del Pokemon"
@@ -225,14 +227,14 @@ export default function CreatePokemon() {
           </div>
 
           {tipos.length < 4 && (
-            <button type="button" onClick={handleAdd}>
+            <button type="button" onClick={handleAdd} className={styles.agregarTipo}>
               Agregar tipo
             </button>
           )}
           
         </div>
         {errores["Tipos"] !== undefined && <p>{errores["Tipos"]}</p>}
-        <button>Crear pokemon</button>
+        <button className={styles.crearPokemon}>Crear pokemon</button>
       </form>
     </div>
   );

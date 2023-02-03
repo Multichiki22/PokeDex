@@ -137,7 +137,25 @@ height: 100%;
 display: flex;
 align-self: center;
 }.botonTipo:hover {
-
     border: solid 1px rgb(192, 198, 255);
     box-shadow: 0px 0px 2px 2px rgb(192, 198, 255);
+}.agregarTipo,.crearPokemon{
+  margin-top: 1%;
+  border: 0;
+  background-color:  rgb(192, 198, 255);
+  border-radius: 50vw;
+  padding: 1% 2% 1% 2%;
+  transition-duration: .5s;
+}.agregarTipo:hover,.crearPokemon:hover{
+  font-weight: 600;
+  transform: scale(1.1);
+}.errorNombre{
+  display: flex;
+  border-radius: 100vw;
+  text-align: center;
+  margin-left: 5%;  
+  margin-right: 5%;
+  color: rgb(205, 0, 0);
+}.erroresCaracteristicas{
+  width: 100%;
 }

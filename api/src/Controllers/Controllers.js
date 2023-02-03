@@ -172,20 +172,32 @@ const crearPokemon = async (
   Peso,
   Tipo
 ) => {
+  if (!Nombre) throw Error("El pokemon debe tener un nombre");
   if (Ataque === "")Ataque =null;
   if (Vida === "") Vida = null;
   if (Defensa === "") Defensa = null;
   if (Velocidad === "") Velocidad = null;
   if (Altura === "") Altura = null;
   if (Peso === "") Peso = null;
-  const resultados = await pokemon.findAll({
+  let resultados = await pokemon.findAll({
     where: {
       Nombre: Nombre,
     },
   });
-  if (resultados.length != 0)
-    throw new Error("Ya existe un pokemon con ese nombre");
-  else if (!Nombre) throw Error("El pokemon debe tener un nombre");
+  if (resultados.length != 0) throw new Error("Ya existe un pokemon con ese nombre");
+
+  else {
+    const url = "https://pokeapi.co/api/v2/pokemon/" + Nombre;
+    await fetch(url)
+      .then((response) => response.json())
+      .then((pokemon) => {
+        resultados = pokemon
+      })
+      .catch((error) => {
+       resultados = error
+      });
+  }
+  if (resultados["id"]) throw new Error("Ya existe un pokemon con ese nombre");
   const nuevoId = "C" + idCreados;
   idCreados++;
   const newPokemon = await pokemon.create({
