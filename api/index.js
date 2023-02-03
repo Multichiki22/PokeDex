@@ -1,6 +1,7 @@
 const server = require("./src/app.js");
 const { sequelize } = require("./src/DB/db.js");
-const PORT = 3000;
+require("dotenv").config()
+const {PORT} = process.env;
 const { type } = require("./src/DB/DB");
 
 const preLoadTypes = async () => {
