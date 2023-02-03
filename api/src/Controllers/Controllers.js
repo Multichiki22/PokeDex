@@ -1,4 +1,5 @@
 const { pokemon, type } = require("../db");
+import fetch from 'node-fetch'
 
 let idCreados = 0;
 
@@ -34,7 +35,7 @@ const filtrarPokemonApi = (pokemon, ruta = "Home") => {
   pokemon["types"].forEach((element) => {
     tipos.push(element["type"]["name"]);
   });
-  let = pokemonFiltrado = {};
+  let pokemonFiltrado = {};
   if (ruta === "Detail") {
     pokemonFiltrado = {
       ID: pokemon["id"],
