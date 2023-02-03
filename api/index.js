@@ -26,8 +26,8 @@ const preLoadTypes = async () => {
 sequelize
   .sync({ force: true })
   .then(() => {
-    server.listen(PORT, () => {
-      preLoadTypes();
+    server.listen(PORT, async() => {
+      await preLoadTypes();
       console.log(`Server listening on port ${PORT}`);
       sequelize.sync({ force: true });
     });
