@@ -2,7 +2,7 @@ const server = require("./src/app.js");
 const { sequelize } = require("./src/DB/db.js");
 require("dotenv").config()
 const {PORT} = process.env;
-const { type } = require("./src/DB/DB");
+const { type } = require("./src/DB/db");
 
 const preLoadTypes = async () => {
   const url = "https://pokeapi.co/api/v2/type";

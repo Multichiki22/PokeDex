@@ -1,4 +1,4 @@
-const { pokemon, type } = require("../DB/DB");
+const { pokemon, type } = require("../DB/db");
 
 let idCreados = 0;
 
