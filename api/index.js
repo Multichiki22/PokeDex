@@ -3,7 +3,7 @@ const { sequelize } = require("./src/db.js");
 require("dotenv").config()
 const {PORT} = process.env;
 const { type } = require("./src/db");
-import fetch from "node-fetch";
+const fetch = require("node-fetch");
 
 const preLoadTypes = async () => {
   const url = "https://pokeapi.co/api/v2/type";
