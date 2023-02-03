@@ -14,11 +14,11 @@ export default function MainPage() {
     if (pokemons) setpokemonesOrdenados(pokemons);
     // eslint-disable-next-line
   }, [pokemons]);
-  if (pokemonesOrdenados.length > 0 && pokemonesOrdenados["0"]["response"]) {
-    const mensaje = pokemons["0"]["response"]["statusText"];
-    const codigo = pokemons["0"]["response"]["status"];
-    navigate(`/Error?mensaje=${mensaje}&codigo=${codigo}`);
-  }
+  // if (pokemonesOrdenados.length > 0 && pokemonesOrdenados["0"]["response"]) {
+  //   const mensaje = pokemons["0"]["response"]["statusText"];
+  //   const codigo = pokemons["0"]["response"]["status"];
+  //   navigate(`/Error?mensaje=${mensaje}&codigo=${codigo}`);
+  // }
 
   if (pokemons.length === 0) return <Loading />;
   return (
