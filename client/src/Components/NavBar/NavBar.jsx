@@ -18,7 +18,7 @@ export default function NavBAr() {
     }else{
       navigate("/Loading")
       axios
-        .get("http://192.168.1.7:3000/pokemons?name=" + busqueda)
+        .get("/pokemons?name=" + busqueda)
         .then((response) => {
           navigate("/Detail/" + response.data.ID);
         })

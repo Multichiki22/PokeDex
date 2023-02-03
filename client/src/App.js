@@ -15,7 +15,8 @@ import {useDispatch } from "react-redux"
 import NavBAr from "./Components/NavBar/NavBar";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import Loading from "./Components/Loading/Loading";
-
+import axios from "axios";
+axios.defaults.baseURL = "http://192.168.1.7:3000/";
 
 
 function App() {

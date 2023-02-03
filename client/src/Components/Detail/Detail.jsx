@@ -11,7 +11,7 @@ export default function Detail() {
   const [detail, setDetail] = useState();
   useEffect(() => {
     axios
-      .get("http://192.168.1.7:3000/pokemons/" + id)
+      .get("/pokemons/" + id)
       .then((response) => {
         return setDetail(response.data);
       })

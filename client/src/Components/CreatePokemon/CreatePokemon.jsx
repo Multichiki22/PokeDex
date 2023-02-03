@@ -81,7 +81,7 @@ export default function CreatePokemon() {
     } else {
       const pokemon = { ...nuevoPokemon, Tipo: tipos };
       axios
-        .post("http://localhost:3000/pokemons", pokemon)
+        .post("/pokemons", pokemon)
         .then(() => {
           alert("Se envio la info");
           window.location.reload();

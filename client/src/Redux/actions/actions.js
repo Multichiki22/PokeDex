@@ -4,7 +4,7 @@ import { GET_POKEMONS } from "./types";
 
 const getPokemons = () => {
   return async function (dispatch) {
-     axios.get("http://192.168.1.7:3000/pokemons")
+     axios.get("/pokemons")
       .then((response) => {
         return dispatch({
           type: GET_POKEMONS,
