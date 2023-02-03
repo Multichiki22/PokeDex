@@ -27,9 +27,10 @@ sequelize
   .sync({ force: true })
   .then(() => {
     server.listen(PORT, async() => {
+      sequelize.sync({ force: true });
       await preLoadTypes();
       console.log(`Server listening on port ${PORT}`);
-      sequelize.sync({ force: true });
+      
     });
   })
   .catch((error) => console.log(error.message));
