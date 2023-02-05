@@ -18,7 +18,7 @@ export default function NavBAr() {
     }else{
       navigate("/Loading")
       axios
-        .get("/pokemons?name=" + busqueda)
+        .get("/pokemons?name=" + busqueda.toLowerCase())
         .then((response) => {
           navigate("/Detail/" + response.data.ID);
         })
