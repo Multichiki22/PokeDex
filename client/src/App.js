@@ -38,6 +38,7 @@ function App() {
         <Route Exact path="/CreatePokemon" element={<CreatePokemon/>}/>
         <Route Exact path="/Error" element={<ErrorPage/>}/>
         <Route Exact path="/Loading" element={<Loading/>}/>
+        <Route Exact path="*" element={<ErrorPage error="Pagina no encontrada" errorCode="404"/>}/>
       </Routes>
     </div>
   );

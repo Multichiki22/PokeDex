@@ -1,7 +1,8 @@
 import { useLocation } from "react-router-dom";
 import styles from "./ErrorPage.module.css";
 import sad from "../../Assets/sad.png";
-export default function ErrorPage() {
+export default function ErrorPage(props) {
+  const {error,errorCode} = props
   const location = useLocation();
   //esta funcion la copieliteral de internet XD
   const parseQuery = (queryString) => {
@@ -15,11 +16,15 @@ export default function ErrorPage() {
     }
     return query;
   };
-  const mensajeDeError = parseQuery(location["search"])["mensaje"];
-  const codigoDeError = parseQuery(location["search"])["codigo"];
-
-  console.log(mensajeDeError, codigoDeError);
-
+  let mensajeDeError;
+  let codigoDeError;
+  if (error) {
+    mensajeDeError = error;
+    codigoDeError = errorCode;
+  } else {
+    mensajeDeError = parseQuery(location["search"])["mensaje"];
+    codigoDeError = parseQuery(location["search"])["codigo"];
+  }
   return (
     <div className={styles.container}>
       <div className={styles.fondo}>
