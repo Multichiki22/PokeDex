@@ -20,6 +20,7 @@ export default function Detail() {
         const codigo = error["response"]["status"];
        navigate(`/Error?mensaje=${mensaje}&codigo=${codigo}`);
       });
+      // eslint-disable-next-line
   }, [id]);
 
   if (detail === undefined) return <Loading />;

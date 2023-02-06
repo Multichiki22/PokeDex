@@ -3,10 +3,10 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import Loading from "../Loading/Loading";
 import FilterBar from "../FilterBar/FilterBar";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 
 export default function MainPage() {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const pokemons = useSelector((state) => state.pokemons);
   const [pokemonesOrdenados, setpokemonesOrdenados] = useState([...pokemons]);
 
