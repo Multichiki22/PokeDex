@@ -2,7 +2,7 @@ import { useEffect,useState } from "react";
 import styles from "./FilterBar.module.css"
 export default function FilterBar(props) {
   const { pokemons,setpokemonesOrdenados,pokemonesOrdenados } = props;
-  const [Orden, setOrden] = useState("Orden");
+  const [Orden, setOrden] = useState("Ascendente");
   const [OrdenPor, setOrdenPor] = useState("Ordenar por");
   const [Mostrar, setMostrar] = useState("Mostar todos");
   useEffect(() => {
