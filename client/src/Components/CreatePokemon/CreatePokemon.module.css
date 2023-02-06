@@ -68,10 +68,10 @@
 .spanAtaque,
 .spanVida,
 .spanDefensa,
-.spanVelocidad,
-.output {
+.spanVelocidad
+ {
     font-size: 120%;
-  display: flex;
+
   padding-right: 8%;
  
 }
@@ -99,7 +99,7 @@ font-size:120%;
     
   background-color: white;
   outline: none;
-  padding: 0.2rem 1rem;
+  padding: 1%, 1%;
   border-radius: 1rem;
   border-color: #7a9cc6;
 }
@@ -149,7 +149,7 @@ align-self: center;
 }.agregarTipo:hover,.crearPokemon:hover{
   font-weight: 600;
   transform: scale(1.1);
-}.errorNombre{
+}.errorNombre,.errorAltura,.errorPeso{
   display: flex;
   border-radius: 100vw;
   text-align: center;
@@ -158,4 +158,8 @@ align-self: center;
   color: rgb(205, 0, 0);
 }.erroresCaracteristicas{
   width: 100%;
+}
+.output{
+  display: flex;
+
 }

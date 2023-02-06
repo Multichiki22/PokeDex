@@ -139,6 +139,8 @@ export default function CreatePokemon() {
           {errores["Nombre"] !== undefined && (
             <span className={styles.errorNombre}>{errores["Nombre"]}</span>
           )}
+           {errores["Peso"] !== undefined && <span className={styles.errorPeso}>{errores["Peso"]}</span>}
+        {errores["Altura"] !== undefined && <span className={styles.errorAltura}>{errores["Altura"]}</span>}
         </div>
         
         <div className={styles.divStats}>
@@ -211,6 +213,7 @@ export default function CreatePokemon() {
               <div key={index} className={styles.divTipo}>
                 <input
                 className={styles.inputTipo}
+                autocomplete="off"
                   type="text"
                   name="Tipo"
                   placeholder="Tipo"
