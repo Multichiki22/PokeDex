@@ -79,13 +79,13 @@
 .inputAltura,
 .inputPeso {
   width: 100%;
-font-size:120%;
+  font-size:120%;
   height: 10%;
   display: flex;
   line-height: 28px;
   border: 2px solid transparent;
   border-bottom-color: #777;
-  padding: 0.2rem 0;
+  padding: 0.2rem 2%;
   outline: none;
   background-color: transparent;
   color: #0d0c22;
