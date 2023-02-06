@@ -16,7 +16,7 @@ export default function CreatePokemon() {
   });
   const [errores, setErrores] = useState({});
   const [tipos, setTipos] = useState([""]);
-  //
+  
   const cambioTipos = (evento, index) => {
     const cambio = evento.target.value;
     const array = [...tipos];
@@ -59,7 +59,6 @@ export default function CreatePokemon() {
   //control de errores de los tipos
   const handleBlurTypes = () => {
     const resultadoValidacion = validateTypes(tipos);
-    console.log(resultadoValidacion);
     const aux = { ...errores, Tipos: resultadoValidacion };
     if (resultadoValidacion !== true) {
       setErrores(aux);
@@ -87,7 +86,6 @@ export default function CreatePokemon() {
           window.location.reload();
         })
         .catch((error) => {
-          console.log(error)
           alert(error.response.data.error);
         });
     }
@@ -148,7 +146,6 @@ export default function CreatePokemon() {
           <div className={styles.divAtaque}>
             <span className={styles.spanAtaque}>Ataque: </span>
             <input
-            oninput="this.nextElementSibling.value = this.value"
               className={styles.inputAtaque}
               step="1"
               name="Ataque"
@@ -213,7 +210,7 @@ export default function CreatePokemon() {
               <div key={index} className={styles.divTipo}>
                 <input
                 className={styles.inputTipo}
-                autocomplete="off"
+                autoComplete="off"
                   type="text"
                   name="Tipo"
                   placeholder="Tipo"
