@@ -1,22 +1,19 @@
 import "./App.css";
-
+import { Routes, Route, useLocation } from "react-router-dom";
+import { getPokemons } from "./Redux/actions/actions";
+import { useEffect } from "react";
+import {useDispatch } from "react-redux"
 import Landing from "./Components/Landing/Landing.jsx";
 import MainPage from "./Components/MainPage/MainPage";
 import Detail from "./Components/Detail/Detail";
 import CreatePokemon from "./Components/CreatePokemon/CreatePokemon";
-
-// Routing
-import { Routes, Route, useLocation } from "react-router-dom";
-
-import { getPokemons } from "./Redux/actions/actions";
-
-import { useEffect } from "react";
-import {useDispatch } from "react-redux"
 import NavBAr from "./Components/NavBar/NavBar";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import Loading from "./Components/Loading/Loading";
 import axios from "axios";
-axios.defaults.baseURL = "https://pi-pokemon-production-7dd6.up.railway.app/";
+
+const baseURL = process.env.REACT_APP_API_URL
+axios.defaults.baseURL = baseURL;
 
 
 function App() {
