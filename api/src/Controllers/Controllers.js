@@ -5,7 +5,7 @@ let idCreados = 0;
 
 const traerPokemonsApi = async () => {
   const links = [];
-  await fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=40")
+  await fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=100")
     .then((response) => response.json())
     .then((data) => {
       data.results.map((pokemon) => {
