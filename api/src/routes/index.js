@@ -10,11 +10,19 @@ const {
 
 const router = Router();
 
+router.get("/",async (req, res)=>{
+  try {
+    console.log("start route");
+    res.status(200).send("Test")
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+})
+
 router.get("/test",async (req, res)=>{
   try {
-    const pokemonEncontrado = await getPokemons();
-    console.log(pokemonEncontrado);
-    res.status(200).json(pokemonEncontrado);
+    console.log("test route");
+    res.status(200).send("Test succesful (test route)")
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
