@@ -8,10 +8,11 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import store from "./Redux/store/index";
 import { Provider } from "react-redux";
+const deployDirection = process.env.REACT_APP_DEPLOY_URL
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename={`/${deployDirection}`}>
       <App />
     </BrowserRouter>
   </Provider>,
