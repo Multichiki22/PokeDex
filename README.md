@@ -6,6 +6,11 @@
 It is a web application which shows the contents of the pokemon database through a web page.
 In the current state this page shows the first 100 pokemons of the pokemon API and the pokemons created by users together with their corresponding data
 
+## What does the page look like?
+<a href="http://52.72.187.107/pokedex/">Look at the app rigth here</a>
+ 
+__Currently this page doesnt have a domain or ssl certificate but is completly functional__
+
 ## What it can do
 
 Broadly speaking, these are the functionalities:
@@ -26,11 +31,12 @@ Broadly speaking, these are the functionalities:
 ## Technologies used
 
 For this project the following technologies were used:
+- AWS (EC2)
 - React
 - Redux
 - CSS
 - Express
 - PostgreSQL
 - Sequelize
-
-## What it should look like
+- nginx
+- p2m
