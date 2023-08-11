@@ -24,7 +24,7 @@ const preLoadTypes = async () => {
 
 // Syncing all the models at once.
 sequelize
-  .sync({ force: true })
+  .sync({ alter: true })
   .then(() => {
     server.listen(PORT, async() => {
       try {
