@@ -2,7 +2,7 @@ import TipoTag from "../TipoTag/TipoTag";
 import styles from "./PokemonCard.module.css";
 import { Link } from "react-router-dom";
 import fotoDefault from "../../Assets/Logo2.png";
-
+const deployDirection = process.env.REACT_APP_DEPLOY_URL
 export default function PokemonCard(props) {
   const { pokemon } = props;
   const { Nombre, ID, Tipo, Ataque, Foto, Defensa, Vida, Velocidad } = pokemon;
@@ -44,7 +44,7 @@ export default function PokemonCard(props) {
     </div>
       <div className={styles.test}>
         <div className={styles.divFoto}>
-          <Link to={"/Detail/" + ID}>
+          <Link to={`${deployDirection}/Detail/` + ID}>
             <img
               className={styles.foto}
               src={Foto ? Foto : fotoDefault}

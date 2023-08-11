@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Logo from "../../Assets/Pokeball.png";
 import styles from "./NavBar.module.css";
-
+const deployDirection = process.env.REACT_APP_DEPLOY_URL
 export default function NavBAr() {
   const [busqueda, setBusqueda] = useState("");
 
@@ -35,7 +35,7 @@ export default function NavBAr() {
   return (
     <div className={styles.container}>
       <div className={styles.divLogo}>
-        <Link to="/mainPage">
+        <Link to={`${deployDirection}/MainPage/`}>
           <img className={styles.logo} src={Logo} alt="" />
         </Link>
       </div>
