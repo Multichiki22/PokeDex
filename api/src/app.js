@@ -5,6 +5,8 @@ const morgan = require('morgan');
 const routes = require('./routes/index.js');
 
 require('./db.js');
+require("dotenv").config();
+const { POKEDEX_DEPLOY } = process.env;
 
 const server = express();
 
@@ -22,7 +24,7 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use('/', routes);
+server.use(`/${POKEDEX_DEPLOY}`, routes);
 
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
