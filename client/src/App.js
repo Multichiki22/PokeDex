@@ -14,8 +14,7 @@ import axios from "axios";
 
 const baseURL = process.env.REACT_APP_API_URL
 axios.defaults.baseURL = baseURL;
-
-
+const deployDirection = process.env.REACT_APP_DEPLOY_URL
 function App() {
   const dispatch = useDispatch()
   useEffect(()=>{
@@ -29,15 +28,16 @@ function App() {
         <NavBAr/>
       </div>
       <Routes>
-        <Route Exact path="/" element={<Landing />} />
-        <Route Exact path="/MainPage/" element={<MainPage/>}/>
-        <Route Exact path="/Detail/:id" element={<Detail/>}/>
-        <Route Exact path="/CreatePokemon" element={<CreatePokemon/>}/>
-        <Route Exact path="/Error" element={<ErrorPage/>}/>
-        <Route Exact path="/Loading" element={<Loading/>}/>
-        <Route Exact path="*" element={<ErrorPage error="Pagina no encontrada" errorCode="404"/>}/>
+        <Route Exact path={`${deployDirection}/`} element={<Landing/>} />
+        <Route Exact path={`${deployDirection}/MainPage/`} element={<MainPage/>}/>
+        <Route Exact path={`${deployDirection}/Detail/:id`} element={<Detail/>}/>
+        <Route Exact path={`${deployDirection}/CreatePokemon`} element={<CreatePokemon/>}/>
+        <Route Exact path={`${deployDirection}/Error`} element={<ErrorPage/>}/>
+        <Route Exact path={`${deployDirection}/Loading`} element={<Loading/>}/>
+        <Route Exact path={`${deployDirection}/*`}element={<ErrorPage error="Pagina no encontrada" errorCode="404"/>}/>
       </Routes>
     </div>
+  
   );
 }
 
