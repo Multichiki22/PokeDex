@@ -1,11 +1,10 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Landing.module.css";
-import iniciar from "../../Assets/Iniciar.png";
-const deployDirection = process.env.REACT_APP_DEPLOY_URL
+import iniciar from "../../Assets/Iniciar.png"
 export default function Landing() {
   return (
     <div className={styles.fondo}>
-        <NavLink to={`${deployDirection}/MainPage`}>
+        <NavLink to="/MainPage">
           <button className={styles.boton}>
             <div className={styles.test}>
             <img className={styles.iniciar} src={iniciar} alt="" />

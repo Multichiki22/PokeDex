@@ -3,10 +3,8 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
-require('./db.js');
 
-require("dotenv").config();
-const { POKEDEX_DEPLOY } = process.env;
+require('./db.js');
 
 const server = express();
 
@@ -24,7 +22,7 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use(`/${POKEDEX_DEPLOY}`, routes);
+server.use('/', routes);
 
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
