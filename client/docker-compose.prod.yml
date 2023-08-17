@@ -2,8 +2,8 @@ version: "3.8"
 
 services:
   app:
-    container_name: pokedex-prod
-    image: app-prod
+    container_name: pokedex_container
+    image: pokedex_image
     build:
       context: .
       target: production
